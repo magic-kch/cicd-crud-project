@@ -7,6 +7,7 @@ on:
 jobs:
   tests:
     runs-on: ubuntu-latest
+     
     env:
       PG_NAME: ${{ secrets.PG_NAME }}
       PG_USER: ${{ secrets.PG_USER }}
@@ -14,7 +15,7 @@ jobs:
       PG_HOST: ${{ secrets.PG_HOST }}
       PG_PORT: ${{ secrets.PG_PORT }}
     services:
-      postgres-main
+      postgres:
         image: postgres
         env:
           POSTGRES_USERS: ${{ env.PG_USER }}
