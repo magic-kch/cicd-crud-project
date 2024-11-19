@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Check changes
         uses: actions/checkout@v2
+      - name: list files
+        run: ls -la
       - name: python install
         uses: actions/setup-python@v5
         with:

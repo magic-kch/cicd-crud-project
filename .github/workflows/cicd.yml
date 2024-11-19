@@ -17,5 +17,5 @@ jobs:
         with:
           python-version: 3.12
       - name: install requirements
-        run: pip install -r requirment.txt
+        run: pip install -r requirements.txt
 
