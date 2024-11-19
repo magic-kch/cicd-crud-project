@@ -40,7 +40,7 @@ jobs:
       - name: install requirements
         run: pip install -r requirements.txt
   deploy:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: tests
     steps:
       - name: deploy app
