@@ -36,7 +36,7 @@ jobs:
       - name: python install
         uses: actions/setup-python@v5
         with:
-          python-version: 3.12
+          python-version: 3.10
       - name: install requirements
         run: pip install -r requirements.txt
   deploy:
@@ -51,5 +51,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
        #  key: ${{ secrets.SSH_KEY }}
           script: |
-            ls -la
-
+            cd cicd-crud-project 
+            git pull 
+            systemctll restart gunicorn_crud
+            
