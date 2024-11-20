@@ -53,5 +53,5 @@ jobs:
           script: |
             cd cicd-crud-project 
             git pull 
-            systemctl restart gunicorn_crud
+            systemctl restart gunicorn-crud
             
